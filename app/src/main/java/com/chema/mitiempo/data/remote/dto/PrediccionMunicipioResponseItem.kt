@@ -37,8 +37,8 @@ data class EstadoCielo(
 )
 
 data class Temperatura(
-    val maxima: Int,
-    val minima: Int
+    val maxima: Int?,
+    val minima: Int?
 )
 
 data class Viento(

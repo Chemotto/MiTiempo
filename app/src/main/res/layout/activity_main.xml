@@ -7,6 +7,30 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Título de la aplicación con fondo redondeado y gris -->
+    <!-- Ajustado con más padding superior y lateral según indicaciones -->
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="251dp"
+        android:layout_height="290dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bg_rounded_gray"
+        android:gravity="center"
+        android:paddingStart="32dp"
+        android:paddingTop="48dp"
+        android:paddingEnd="32dp"
+        android:paddingBottom="24dp"
+        android:text="TEMPERATURA ESTIMADA PARA GETAFE"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/weatherDataContainer"
         android:layout_width="match_parent"
@@ -17,14 +41,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/titleTextView">
 
         <TextView
             android:id="@+id/maxTempTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Máx: --°C"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <TextView
@@ -32,8 +56,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mín: --°C"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lastUpdateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Actualizado: --"
+            android:textSize="18sp"
+            android:textStyle="italic" />
     </LinearLayout>
 
     <ProgressBar
