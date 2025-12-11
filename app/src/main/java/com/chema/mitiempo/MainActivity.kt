@@ -142,10 +142,10 @@ class MainActivity : AppCompatActivity() {
             
             Log.d(TAG, "Temperatura máxima hoy: $maxTemp")
 
-            binding.maxTempTextView.text = "$maxTemp°C" // Quitamos el texto "Máx:"
+            binding.maxTempTextView.text = "Máx: $maxTemp°C"
             binding.maxTempTextView.setTextColor(Color.RED)
 
-            binding.minTempTextView.text = "$minTemp°C" // Quitamos el texto "Mín:"
+            binding.minTempTextView.text = "Mín: $minTemp°C"
             binding.minTempTextView.setTextColor(Color.BLUE)
             
             // Formatear y mostrar la fecha actual
